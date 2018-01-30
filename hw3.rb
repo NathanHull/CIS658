@@ -1,3 +1,8 @@
+#Kyle Hekhuis
+#Nathan Hull
+#CIS 658 Winter 2018
+#Homework 3
+
 #Question 1
 print "Question 1\n"
 
