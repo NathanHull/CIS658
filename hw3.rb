@@ -73,6 +73,23 @@ print data.convert_to_type_strings
 #Question 7
 print "\n\nQuestion7\n"
 
-def tabulate_sections
-
+def tabulate_sections(ensemble)
+	sections = Hash.new(0)
+	for instrument in ensemble
+		if instrument == :piano
+			sections["percussion"] += 1
+		elsif instrument == :clarinet or instrument == :oboe
+			sections["woodwind"] += 1
+		elsif instrument == :trumpet or instrument == :frenchhorn
+			sections["brass"] += 1
+		elsif instrument == :violin or instrument == :cello
+			sections["strings"] += 1
+		else
+			puts "#{instrument} is invalid"
+		end
+	end
+	return sections
 end
+ensemble = [:piano, :clarinet, :oboe, :trumpet, :frenchhorn, :violin, :piano, :oboe, :cello]
+print tabulate_sections(ensemble)
+print "\n"
