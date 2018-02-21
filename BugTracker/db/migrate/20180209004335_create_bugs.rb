@@ -8,13 +8,6 @@ class CreateBugs < ActiveRecord::Migration[5.1]
       t.integer :status, default: :open
 
       t.timestamps
-
-      after_initialize do
-          if self.new_record?
-              self.issue_type = :feature
-              self.priority = :medium
-              self.status = :open
-      end
     end
   end
 end
