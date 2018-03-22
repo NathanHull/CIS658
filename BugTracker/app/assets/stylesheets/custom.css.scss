@@ -2,11 +2,14 @@
 @import "bootstrap";
 
 .jumbotron {
+  background-image: asset-url('ladybug.jpg');
   background-size: cover;
+  background-position: 0% 10%;
   height: 400px;
 }
 
 .jumbotron h1 {
+  color: #fff;
   text-align: center;
   margin-bottom: 30px;
   letter-spacing: -1px;
@@ -14,6 +17,7 @@
 }
 
 .jumbotron p {
+  color: #fff;
   text-align: center;
   margin-bottom: 30px;
   font-weight: bold;

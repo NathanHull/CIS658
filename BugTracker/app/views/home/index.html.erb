@@ -1,9 +1,9 @@
 <div class="jumbotron">
   <div class="container">
-    <h1>Welcome to my world of bees!</h1>
-    <p>The happiness of the bee and the dolphin is to exist. For man it is to know that and to wonder
-    at it.</p>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+    <h1>Welcome to Bug Tracker!</h1>
+    <p>99 little bugs in the code, 99 little bugs in the code.</br>
+    Take one down, patch it around, 117 little bugs in the code</p>
+    <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
   </div>
 </div>
 
@@ -13,9 +13,12 @@
     <% @bugs.each do |bug| %>
       <div class="col-md-4">
         <h2><%= bug.title%></h2>
-        <p><%= bug.description.truncate_words(30)%></p>
+        <p>Priority: <%= bug.priority.truncate_words(30)%></p>
+        <p>Type: <%= bug.issue_type.truncate_words(30)%></p>
+        <p>Status: <%= bug.status.truncate_words(30)%></p>
+        <p>"<%= bug.description.truncate_words(30)%>"</p>
         <p>
-          <%= link_to 'Read more >', bug, class: "btn btn-default"%>
+          <%= link_to 'View bug', bug, class: "btn btn-default"%>
         </p>
       </div>
       <% end %>
@@ -26,5 +29,5 @@
 </div> <!-- /container -->
 
 <footer class="container">
-  <p>&copy; Company 2017-2018</p>
+  <p>&copy; Kyle Hekhuis & Nathan Hull 2018</p>
 </footer>
