@@ -1,5 +1,7 @@
-<h1>New Bug</h1>
+<div>
+<h1 id="titleNewBug">New Bug</h1>
 
 <%= render 'form', bug: @bug %>
+</div>
 
-<%= link_to 'Back', bugs_path %>
+<%= link_to 'Back', bugs_path, :class=>"btn btn-warning", :id=>"btnShowBack" %>

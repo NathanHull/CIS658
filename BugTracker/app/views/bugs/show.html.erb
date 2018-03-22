@@ -1,34 +1,37 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<p class="display" id="title">
   <strong>Title:</strong>
   <%= @bug.title %>
 </p>
 
-<p>
+<p class="display">
   <strong>User:</strong>
   <%= @bug.user.fname + ' ' + @bug.user.lname %>
 </p>
 
-<p>
+<p class="display">
   <strong>Description:</strong>
   <%= @bug.description %>
 </p>
 
-<p>
+<p class="display">
   <strong>Issue type:</strong>
   <%= @bug.issue_type %>
 </p>
 
-<p>
+<p class="display">
   <strong>Priority:</strong>
   <%= @bug.priority %>
 </p>
 
-<p>
+<p class="display">
   <strong>Status:</strong>
   <%= @bug.status %>
 </p>
 
-<%= link_to 'Edit', edit_bug_path(@bug) %> |
-<%= link_to 'Back', bugs_path %>
+<br />
+<div>
+    <%= link_to 'Edit', edit_bug_path(@bug), :id=>"btnShowEdit", :class=>"btn btn-info" %> |
+    <%= link_to 'Back', bugs_path, :id=>"btnShowBack", :class=>"btn btn-warning" %>
+</div>

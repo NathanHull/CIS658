@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Bugs</h1>
+<div class="title">
+    <h1>Bugs</h1>
+</div>
 
 <table>
   <thead>
@@ -24,9 +26,9 @@
         <td><%= bug.issue_type %></td>
         <td><%= bug.priority %></td>
         <td><%= bug.status %></td>
-        <td><%= link_to 'Show', bug %></td>
-        <td><%= link_to 'Edit', edit_bug_path(bug) %></td>
-        <td><%= link_to 'Destroy', bug, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', bug, :class => "btn btn-info" %></td>
+        <td><%= link_to 'Edit', edit_bug_path(bug), :class => "btn btn-warning" %></td>
+        <td><%= link_to 'Destroy', bug, :class => "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +36,6 @@
 
 <br>
 
-<%= link_to 'New Bug', new_bug_path %>
+<div class="centerAlign">
+    <%= button_to 'New Bug', new_bug_path, :class => "btn btn-primary", :method => :get %></button>
+</div>
